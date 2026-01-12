@@ -10,7 +10,14 @@ from kpi import compute_kpis
 from simpy_runtime import run_flowline_sim
 
 from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI
 
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"status": "ok", "service": "DTaaS"}
+    
 app = FastAPI(title="DTaaS")
 router = APIRouter()
 
