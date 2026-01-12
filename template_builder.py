@@ -1,4 +1,4 @@
-from app.core.components import COMPONENTS
+from components import COMPONENTS
 
 
 def build_template_schema(case: dict) -> dict:
