@@ -9,8 +9,16 @@ from compiler import compile_twin
 from kpi import compute_kpis
 from simpy_runtime import run_flowline_sim
 
-api_router = APIRouter()
+from fastapi import FastAPI, APIRouter
 
+app = FastAPI(title="DTaaS")
+router = APIRouter()
+
+@router.get("/status")
+def status():
+    return {"status": "ok"}
+
+app.include_router(router)
 
 class CasePayload(BaseModel):
     case: Dict[str, Any]
