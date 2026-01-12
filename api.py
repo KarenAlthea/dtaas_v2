@@ -3,11 +3,11 @@ from typing import Any, Dict
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from app.core.components import COMPONENTS
-from app.core.template_builder import build_template_schema
-from app.core.compiler import compile_twin
-from app.core.kpi import compute_kpis
-from app.core.simpy_runtime import run_flowline_sim
+from components import COMPONENTS
+from template_builder import build_template_schema
+from compiler import compile_twin
+from kpi import compute_kpis
+from simpy_runtime import run_flowline_sim
 
 api_router = APIRouter()
 
